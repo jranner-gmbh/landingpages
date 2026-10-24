@@ -121,7 +121,7 @@ ${rows.map(([k, v]) => `<tr><td style="padding:6px 16px 6px 0;color:#5d6a62;vert
           <p>vielen Dank für Ihre Anfrage zu einer neuen Wärmepumpe. Wir haben alles erhalten und melden uns in der Regel innerhalb eines Werktags telefonisch bei Ihnen, um einen Termin vor Ort zu vereinbaren.</p>
           <p>Tipp für das Telefonat: Halten Sie, wenn möglich, Ihren Heizöl- oder Gasverbrauch der letzten Jahre bereit.</p>
           <p>Falls Sie vorher etwas ergänzen möchten, antworten Sie einfach auf diese Mail oder rufen Sie uns an: 089/43909732.</p>
-          <p>Mit freundlichen Grüßen<br>Ihr Team von J. RANNER Energielösungen<br>${esc(FIRMA)}<br>Parsdorfer Straße 19, 85599 Vaterstetten</p></div>`
+          <p>Mit freundlichen Grüßen<br>Ihr Team von J. Ranner Energielösungen<br>${esc(FIRMA)}<br>Parsdorfer Straße 19, 85599 Vaterstetten</p></div>`
       });
     } catch (e) { console.error('Bestätigung fehlgeschlagen', e); }
   }
