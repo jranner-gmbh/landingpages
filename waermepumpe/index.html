@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wärmepumpe im Münchner Osten | J. Ranner – Bad &amp; Dusche | Armaturenservice &amp; Sanitärfachgeschäft GmbH</title>
+<meta name="description" content="Wärmepumpe im Münchner Osten vom Familienbetrieb J. Ranner aus Hergolding: Besichtigung, Heizlastberechnung, Einbau und Unterstützung bei der KfW-Förderung.">
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="Wärmepumpe im Münchner Osten | J. Ranner – Bad &amp; Dusche | Armaturenservice &amp; Sanitärfachgeschäft GmbH">
+<meta property="og:description" content="Wärmepumpe im Münchner Osten vom Familienbetrieb J. Ranner aus Hergolding: Besichtigung, Heizlastberechnung, Einbau und Unterstützung bei der KfW-Förderung.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="facebook-domain-verification" content="4jqbektz6ur7qnodo23fje31mdr809">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Aufbau wie bad.jranner.de, Farben aus dem Logo "J. RANNER Energielösungen" (Grün + Orange). */
+:root{
+  --navy:#00401f;      /* dunkles Logo-Grün: Überschriften + dunkle Bänder */
+  --blue:#006430;      /* Logo-Grün: Buttons, Akzente */
+  --blue-d:#00512a;
+  --accent:#ee7219;    /* Logo-Orange: Unterstreichung */
+  --sky:#eaf4e7;       /* helles Band */
+  --text:#1f2a24;
+  --grey:#5d6a62;
+  --line:#dbe5dd;
+  --white:#ffffff;
+  --ok:#006430;
+  --err:#b42318;
+  --f:"Instrument Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+  --swash:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 14' preserveAspectRatio='none'%3E%3Cpath d='M2 9C40 4 90 3 198 6M8 12C60 8 120 8 190 10' fill='none' stroke='%23ee7219' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--white);color:var(--text);font-family:var(--f);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--blue)}
+h1,h2,h3{color:var(--navy);margin:0;text-wrap:balance;font-weight:600;letter-spacing:-.012em}
+h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15}
+h2{font-size:clamp(1.65rem,3.4vw,2.4rem);line-height:1.18}
+h3{font-size:1.2rem;line-height:1.3}
+p{margin:0}
+.u{background:var(--swash) no-repeat 0 100%/100% .32em;padding-bottom:.12em}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+.center{text-align:center}
+.lead{color:var(--grey);font-size:1.08rem;max-width:40em}
+.center .lead{margin-inline:auto}
+
+.btn{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-family:var(--f);font-weight:600;font-size:1.05rem;line-height:1.25;
+  padding:.7em 1.9em;border-radius:4px;border:0;background:var(--blue);color:#fff;text-decoration:none;cursor:pointer;transition:background .15s,transform .15s;text-align:center}
+.btn small{font-weight:400;font-size:.8rem;opacity:.9}
+.btn:hover{background:var(--blue-d)}
+.btn:active{transform:translateY(1px)}
+.btn.dark{background:var(--navy)}
+.btn.dark:hover{background:#12271b}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #8fcf8a;outline-offset:2px}
+
+/* Kopfzeile */
+.top{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:20}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-height:48px}
+.logo img{height:48px;width:auto}
+.wordmark{display:flex;flex-direction:column;line-height:1}
+.wordmark b{font-size:1.45rem;font-weight:600;color:#4a4f4c;letter-spacing:.01em}
+.wordmark span{font-size:.72rem;font-weight:600;letter-spacing:.16em;color:var(--accent);margin-top:3px}
+.arc{width:34px;height:34px;flex:none}
+.top .tel{display:none}
+@media(min-width:600px){.top .tel{display:inline-flex;font-size:.95rem;padding:.55em 1.3em}}
+
+/* Dunkles Band mit weißer Karte */
+.navyband{background:var(--navy);padding-block:40px 64px}
+.card{background:var(--white);border-radius:16px;padding:40px 22px 28px}
+@media(min-width:760px){.card{padding:56px 56px 40px}}
+.hero .card{display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center}
+.hero h2{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600}
+.hero .lead{font-size:1.1rem}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:6px}
+.ctas .btn{min-width:250px}
+.checks{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;color:var(--grey);font-size:.95rem}
+.checks li{display:flex;gap:8px;align-items:baseline}
+.checks li::before{content:"";flex:none;width:.65em;height:.35em;border-left:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:rotate(-45deg) translateY(-.15em)}
+.hero-photo{margin:14px 0 0;width:100%}
+.hero-photo img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:55% 68%;border-radius:10px}
+@media(min-width:760px){.hero-photo img{aspect-ratio:21/9}}
+
+.slant{height:56px;background:var(--navy);clip-path:polygon(0 0,100% 0,100% 0,0 100%);margin-bottom:-1px}
+
+section.block{padding-block:64px}
+.sechead{display:flex;flex-direction:column;gap:14px;margin-bottom:36px}
+.sechead.center{align-items:center}
+
+/* Zahlen */
+.facts dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 16px}
+@media(min-width:760px){.facts dl{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.facts div{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center}
+.facts dt{font-size:2.6rem;font-weight:600;color:var(--navy);line-height:1;font-variant-numeric:tabular-nums}
+.wolfchip{display:inline-flex;background:var(--navy);border-radius:6px;padding:7px 12px;align-self:center}
+.wolfchip img{height:26px;width:auto}
+.wolfchip.big{align-self:flex-start;padding:9px 16px}
+.wolfchip.big img{height:34px}
+.inside .wolfchip img,.facts .wolfchip img{width:auto;aspect-ratio:auto;border-radius:0;object-fit:contain}
+.facts dd{margin:0;font-size:.95rem;color:var(--grey)}
+
+/* helles Band, Fragen */
+.skyband{background:var(--sky)}
+.worries{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:820px){.worries{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.worry{background:var(--white);border-radius:12px;padding:24px 24px 26px;display:flex;flex-direction:column;gap:10px}
+.worry h3{font-size:1.15rem}
+.worry p{font-size:.98rem;color:var(--grey)}
+
+/* Ablauf */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:32px 22px;grid-template-columns:1fr;counter-reset:s}
+@media(min-width:640px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:980px){.steps{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:14px}
+.steps img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px}
+.steps h3{display:flex;align-items:baseline;gap:10px}
+.steps h3::before{content:counter(s);flex:none;width:1.7em;height:1.7em;border-radius:50%;background:var(--blue);color:#fff;font-size:.8rem;display:inline-grid;place-items:center;transform:translateY(-.1em)}
+.steps p{font-size:.98rem;color:var(--grey)}
+.steps .tag{font-size:.85rem;color:var(--blue);font-weight:500}
+
+/* Bild + Text */
+.inside{display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
+@media(min-width:820px){.inside{grid-template-columns:.75fr 1.25fr;gap:56px}}
+.inside img{border-radius:10px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.inside .txt{display:flex;flex-direction:column;gap:14px;max-width:34em}
+.inside .txt p{color:var(--grey)}
+.inside.flip img{order:0}
+@media(min-width:820px){.inside.flip{grid-template-columns:1.25fr .75fr}.inside.flip img{order:2}}
+.bul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;color:var(--grey)}
+.bul li{display:flex;gap:10px;align-items:baseline}
+.bul li::before{content:"";flex:none;width:.65em;height:.35em;border-left:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);transform:rotate(-45deg) translateY(-.15em)}
+
+/* Galerie */
+.navyband h2{color:#fff}
+.navyband .lead{color:#bcd0c2}
+.navyband .card h2{color:var(--navy)}
+.navyband .card .lead{color:var(--grey)}
+.gallery{display:grid;gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(min-width:820px){.gallery{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.gallery figure{margin:0;display:flex;flex-direction:column;gap:8px}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}
+.gallery figcaption{font-size:.85rem;color:#bcd0c2}
+.gallery figure:first-child{grid-column:span 2}
+.gallery figure:first-child img{aspect-ratio:3/2}
+@media(min-width:820px){.gallery figure:first-child{grid-column:span 1}.gallery figure:first-child img{aspect-ratio:3/4}}
+
+/* Team */
+.team{display:grid;gap:28px;grid-template-columns:1fr;align-items:center}
+@media(min-width:880px){.team{grid-template-columns:.8fr 1.2fr;gap:56px}}
+.team img{border-radius:10px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.team .txt{display:flex;flex-direction:column;gap:14px}
+.team .txt p{color:var(--grey)}
+
+/* FAQ */
+.faq{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq details{background:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:0 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--blue);flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq details p{color:var(--grey);padding-bottom:18px;font-size:.98rem}
+
+/* Formular */
+#anfrage{scroll-margin-top:70px}
+.formgrid{display:grid;gap:32px;grid-template-columns:1fr}
+@media(min-width:900px){.formgrid{grid-template-columns:.85fr 1.15fr;gap:56px}}
+.aside{display:flex;flex-direction:column;gap:16px}
+.aside .lead{max-width:none}
+.aside .contact{font-size:.98rem;color:var(--grey);border-top:1px solid var(--line);padding-top:16px;display:flex;flex-direction:column;gap:4px}
+.aside .contact b{color:var(--navy);font-weight:600}
+.quiz{min-width:0}
+.progress{display:flex;align-items:center;gap:12px;margin-bottom:20px;font-size:.88rem;color:var(--grey);font-variant-numeric:tabular-nums}
+.bar{flex:1;height:6px;background:var(--line);border-radius:3px;overflow:hidden}
+.bar i{display:block;height:100%;width:16%;background:var(--blue);transition:width .25s}
+.qstep{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:14px}
+.qstep legend{font-size:1.4rem;font-weight:600;color:var(--navy);padding:0;margin-bottom:6px;line-height:1.25}
+.qstep .sub{font-size:.95rem;color:var(--grey);margin-top:-6px}
+.opts{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:560px){.opts.two{grid-template-columns:1fr 1fr}}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt label{display:flex;flex-direction:column;gap:2px;background:#f5f9f5;border:1.5px solid var(--line);border-radius:8px;padding:14px 16px;cursor:pointer;transition:border-color .12s,background .12s}
+.opt label b{font-weight:600;font-size:1.02rem;color:var(--navy)}
+.opt label span{font-size:.88rem;color:var(--grey)}
+.opt label:hover{border-color:#a8c7ae;background:#fff}
+.opt input:checked+label{border-color:var(--blue);background:#edf7ec;box-shadow:inset 0 0 0 1px var(--blue)}
+.opt input:focus-visible+label{outline:3px solid #8fcf8a;outline-offset:2px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:600;font-size:.95rem;color:var(--navy)}
+.field label em{font-style:normal;font-weight:400;color:var(--grey)}
+.field input,.field textarea{font:inherit;font-size:1rem;padding:12px 14px;border:1.5px solid var(--line);border-radius:6px;background:#f5f9f5;color:var(--text);width:100%}
+.field input:focus,.field textarea:focus{border-color:var(--blue);background:#fff}
+.field textarea{min-height:92px;resize:vertical}
+.row2{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:560px){.row2{grid-template-columns:1fr 1fr}}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--grey)}
+.consent input{margin-top:.25em;width:18px;height:18px;flex:none;accent-color:var(--blue)}
+.qnav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+.back{background:none;border:0;font:inherit;color:var(--grey);cursor:pointer;padding:8px 0;text-decoration:underline;text-underline-offset:3px}
+.err{color:var(--err);font-size:.9rem;min-height:1.2em}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.done{display:flex;flex-direction:column;gap:14px}
+.done .tick{width:52px;height:52px;border-radius:50%;background:var(--ok);display:grid;place-items:center}
+.done .tick::after{content:"";width:20px;height:10px;border-left:3px solid #fff;border-bottom:3px solid #fff;transform:rotate(-45deg) translate(2px,-2px)}
+.done ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:6px;color:var(--grey)}
+
+/* Fußzeile */
+footer{background:#002a14;color:#c4d3c8;font-size:.92rem;padding-block:40px calc(96px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:760px){footer .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}footer{padding-bottom:40px}}
+footer b{color:#fff;font-weight:600;display:block;margin-bottom:6px}
+footer a{color:#fff}
+footer table{border-collapse:collapse;font-variant-numeric:tabular-nums}
+footer td{padding:1px 14px 1px 0;vertical-align:top}
+footer .legal{grid-column:1/-1;border-top:1px solid #2b4434;padding-top:16px;font-size:.85rem;color:#9fb4a6}
+
+.stickycta{position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;transition:transform .2s}
+.stickycta .btn{flex:1;padding:.75em 1em}
+.stickycta .btn.ghost{flex:0 0 auto;background:var(--navy)}
+.stickycta.off{transform:translateY(110%)}
+@media(min-width:760px){.stickycta{display:none}}
+
+.cookie{position:fixed;left:16px;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;max-width:540px;margin-inline:auto;background:var(--white);border-radius:12px;
+  box-shadow:0 14px 44px -12px rgba(19,40,28,.4);padding:20px;display:flex;flex-direction:column;gap:12px;font-size:.92rem;color:var(--grey)}
+.cookie b{color:var(--navy)}
+.cookie .cb{display:flex;gap:10px;flex-wrap:wrap}
+.cookie .btn{font-size:.95rem;padding:.65em 1.1em;flex:1}
+.cookie .btn.ghost{background:#eef4ef;color:var(--navy)}
+.preview-note{background:#fff7d6;color:#5c4a00;font-size:.85rem;text-align:center;padding:8px 16px}
+.preview-note button{font:inherit;background:none;border:0;text-decoration:underline;color:inherit;cursor:pointer;padding:0 4px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HVACBusiness","name":"J. Ranner – Bad & Dusche | Armaturenservice & Sanitärfachgeschäft GmbH","telephone":"+498943909732","email":"info@jranner.de","url":"https://www.jranner.de/waermepumpe","address":{"@type":"PostalAddress","streetAddress":"Parsdorfer Straße 19","postalCode":"85599","addressLocality":"Vaterstetten","addressCountry":"DE"}}</script>
+</head>
+<body>
+<script>window.LP_MODE='live';</script>
+
+<div class="preview-note" id="previewNote" hidden>Vorschau · Formular sendet hier keine echte Mail · Varianten:
+  <button type="button" data-v="waermepumpe">Standard</button>·<button type="button" data-v="heizungstausch">Heizungstausch</button>·<button type="button" data-v="foerderung">Förderung</button>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="J. RANNER Energielösungen">
+      <img src="img/logo-energie.png" alt="J. RANNER Energielösungen" width="139" height="48">
+    </a>
+    <a class="btn dark tel" href="tel:+498943909732">089/43909732</a>
+  </div>
+</header>
+
+<main>
+<section class="hero navyband">
+  <div class="wrap">
+    <div class="card">
+      <h1 id="hTitle">Ihre neue <span class="u">Wärmepumpe</span>. Geplant, eingebaut und betreut aus einer Hand.</h1>
+      <h2 id="hEyebrow">Wärmepumpen vom Fachbetrieb aus Hergolding</h2>
+      <p class="lead" id="hLede">Wir schauen uns Ihr Haus vor Ort an, berechnen die Heizlast und bauen eine WOLF-Wärmepumpe ein, die zu Ihrem Haus passt. Bei den Unterlagen für die KfW-Förderung unterstützen wir Sie.</p>
+      <div class="ctas">
+        <a class="btn" href="#anfrage" data-cta="hero">Beratung anfragen<small>6 kurze Fragen, ca. 1 Minute</small></a>
+        <a class="btn dark" href="tel:+498943909732">089/43909732<small>Lieber direkt anrufen</small></a>
+      </div>
+      <ul class="checks">
+        <li>Besichtigung vor Ort, unverbindlich</li>
+        <li>Heizlastberechnung inklusive</li>
+        <li>Unterstützung bei der Förderung</li>
+      </ul>
+      <figure class="hero-photo"><img id="hImg" src="img/hero-se.jpg" alt="WOLF CHA-Monoblock Special Edition vor einem modernen Einfamilienhaus" width="1600" height="1600" fetchpriority="high"></figure>
+    </div>
+  </div>
+</section>
+<div class="slant" aria-hidden="true"></div>
+
+<section class="block wrap facts" aria-label="J. Ranner in Zahlen" style="padding-top:32px">
+  <dl>
+    <div><dt>40+</dt><dd>Jahre Erfahrung</dd></div>
+    <div><dt>2.</dt><dd>Generation Familienbetrieb</dd></div>
+    <div><dt><span class="wolfchip"><img src="img/wolf.png" alt="WOLF" width="91" height="28"></span></dt><dd>Platin Partner</dd></div>
+    <div><dt>20 km</dt><dd>rund um Hergolding</dd></div>
+  </dl>
+</section>
+
+<section class="block skyband" aria-labelledby="wTitle">
+  <div class="wrap">
+    <div class="sechead center">
+      <h2 id="wTitle">Die drei Fragen, die wir <span class="u">am häufigsten</span> hören</h2>
+    </div>
+    <div class="worries">
+      <div class="worry">
+        <h3>Geht das auch in meinem älteren Haus?</h3>
+        <p>In vielen Bestandshäusern ja. Entscheidend ist nicht das Baujahr allein, sondern wie viel Wärme Ihr Haus braucht. Das rechnen wir vor Ort genau aus und sagen Ihnen ehrlich, ob es passt.</p>
+      </div>
+      <div class="worry">
+        <h3>Ist eine Wärmepumpe nicht laut?</h3>
+        <p>Moderne Geräte laufen leise. Wichtig ist der richtige Aufstellort, mit Abstand zu Schlafzimmern und Nachbarn. Den planen wir bei der Besichtigung gemeinsam mit Ihnen.</p>
+      </div>
+      <div class="worry">
+        <h3>Bekomme ich Förderung?</h3>
+        <p>Für den Austausch einer alten Heizung gibt es einen Zuschuss der KfW. Wir unterstützen Sie bei den Förderunterlagen: Angebot, Bestätigung zum Antrag und Auftragsbestätigung bekommen Sie von uns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" aria-labelledby="aTitle">
+  <div class="sechead center">
+    <h2 id="aTitle">So kommen Sie zu Ihrer <span class="u">Wärmepumpe</span></h2>
+    <p class="lead">Vier Schritte, ein fester Ansprechpartner.</p>
+  </div>
+  <ol class="steps">
+    <li><img src="img/altkessel.jpg" alt="Alter WOLF-Heizkessel mit Typenschild" loading="lazy" width="900" height="1200">
+      <h3>Besichtigung</h3><p>Wir sehen uns Heizung, Heizkörper und Aufstellort an und klären Ihre Fragen direkt vor Ort.</p></li>
+    <li><img src="img/innen-split.jpg" alt="WOLF Inneneinheit mit Heizkreisverteilung im Heizraum" loading="lazy" width="1200" height="900">
+      <h3>Konzept und Angebot</h3><p>Heizlastberechnung, passende Anlagengröße und ein transparentes Angebot.</p><span class="tag">Wir unterstützen Sie bei den Förderunterlagen</span></li>
+    <li><img src="img/montage.jpg" alt="Zwei Monteure schließen eine WOLF-Außeneinheit an" loading="lazy" width="900" height="1200">
+      <h3>Ausbau und Montage</h3><p>Alte Heizung raus, neue Anlage rein. Unser Team steuert alle Arbeiten, Sie haben einen festen Ansprechpartner.</p></li>
+    <li><img src="img/einweisung.jpg" alt="Kundin bedient die Regelung ihrer neuen WOLF-Wärmepumpe" loading="lazy" width="900" height="1200" style="object-position:50% 38%">
+      <h3>Inbetriebnahme</h3><p>Funktionstest, Einweisung in die Bedienung. Und auch danach sind wir für Wartung und Service da.</p></li>
+  </ol>
+</section>
+
+<section class="block skyband" aria-labelledby="iTitle">
+  <div class="wrap inside">
+    <img src="img/hero.jpg" alt="WOLF-Wärmepumpe mit Schnee auf dem Gehäuse" loading="lazy" width="1200" height="1600">
+    <div class="txt">
+      <h2 id="iTitle">Läuft auch bei <span class="u">Schnee und Frost</span>.</h2>
+      <p>Eine Luft/Wasser-Wärmepumpe holt sich ihre Energie auch bei Minusgraden aus der Außenluft. Damit sie im tiefsten Winter zuverlässig heizt, muss sie richtig ausgelegt sein.</p>
+      <p>Deshalb rechnen wir bei jedem Haus die Heizlast aus, bevor wir ein Gerät vorschlagen. Zu klein heißt kalte Räume, zu groß heißt unnötige Kosten.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" aria-labelledby="wolfTitle">
+  <div class="inside flip">
+    <img src="img/cha-se.jpg" alt="Produktfoto WOLF CHA-Monoblock Special Edition" loading="lazy" width="474" height="438" style="aspect-ratio:auto;object-fit:contain;max-width:440px;margin-inline:auto">
+    <div class="txt">
+      <span class="wolfchip big"><img src="img/wolf.png" alt="WOLF" width="130" height="40"></span>
+      <h2 id="wolfTitle">Wir setzen auf <span class="u">WOLF</span> aus Bayern.</h2>
+      <p>Die WOLF CHA-Monoblock, im Bild als Special Edition, ist eine Luft/Wasser-Wärmepumpe, die im Winter heizt und im Sommer auf Wunsch auch kühlt.</p>
+      <ul class="bul">
+        <li>Natürliches Kältemittel R290 (Propan)</li>
+        <li>Heizung und Warmwasser aus einem System</li>
+        <li>Für Bestandsbau und Neubau</li>
+        <li>Kein Schornsteinfeger mehr nötig</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block navyband" aria-labelledby="gTitle" style="padding-block:64px">
+  <div class="wrap">
+    <div class="sechead center">
+      <h2 id="gTitle">Wärmepumpen <span class="u">von uns</span></h2>
+      <p class="lead">Echte Baustellen aus der Region, fotografiert von unserem Team.</p>
+    </div>
+    <div class="gallery">
+      <figure><img src="img/montage.jpg" alt="Monteure beim Anschluss der Außeneinheit" loading="lazy" width="900" height="1200"><figcaption>Anschluss der Außeneinheit</figcaption></figure>
+      <figure><img src="img/ausbau.jpg" alt="Team beim Ausbau einer alten Heizungsanlage" loading="lazy" width="900" height="1200"><figcaption>Ausbau der alten Heizung</figcaption></figure>
+      <figure><img src="img/innen-split.jpg" alt="WOLF Wärmepumpencenter mit Heizkreisverteilung im Heizraum" loading="lazy" width="1200" height="900"><figcaption>WOLF Wärmepumpencenter im Heizraum</figcaption></figure>
+      <figure><img src="img/innen-wand.jpg" alt="Neue WOLF-Anlage mit Speicher" loading="lazy" width="900" height="1200"><figcaption>Neue Anlage mit Speicher</figcaption></figure>
+      <figure><img src="img/aussen-wand.jpg" alt="Neu aufgestellte WOLF-Außeneinheit an einer Hauswand" loading="lazy" width="1400" height="1050"><figcaption>Neue Außeneinheit an der Hauswand</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block wrap" aria-labelledby="tTitle">
+  <div class="team">
+    <img src="img/team-wp.jpg" alt="Das Team von J. Ranner an einer neu installierten Wärmepumpe" loading="lazy" width="1050" height="1400">
+    <div class="txt">
+      <h2 id="tTitle">Ein Familienbetrieb, <span class="u">der bleibt</span>.</h2>
+      <p>J. Ranner gibt es seit über 40 Jahren, heute in zweiter Generation. Unser Firmensitz ist in Hergolding. Unsere eigenen Monteure bauen Ihre Wärmepumpe ein, und wir kümmern uns auch Jahre später um Wartung und Service.</p>
+      <p style="font-size:.95rem">Wir arbeiten im Umkreis von etwa 20 km um Hergolding, zum Beispiel in Vaterstetten, Baldham, Grasbrunn, Poing, Heimstetten, Kirchheim, Feldkirchen, Haar, Zorneding und Putzbrunn.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block skyband" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="sechead center"><h2 id="faqTitle">Gut zu <span class="u">wissen</span></h2></div>
+    <div class="faq">
+      <details><summary>Brauche ich eine Fußbodenheizung?</summary><p>Nicht unbedingt. Auch mit Heizkörpern kann eine Wärmepumpe gut funktionieren. Bei der Besichtigung prüfen wir, ob Ihre Heizkörper reichen oder ob einzelne getauscht werden sollten.</p></details>
+      <details><summary>Was passiert mit meiner alten Heizung?</summary><p>Wir bauen sie aus und entsorgen sie fachgerecht.</p></details>
+      <details><summary>Wer kümmert sich um die Förderung?</summary><p>Den Antrag stellen Sie selbst online bei der KfW, bevor die Arbeiten beginnen. Wir unterstützen Sie dabei und liefern die nötigen Unterlagen: Angebot, Bestätigung zum Antrag und eine förderfähige Auftragsbestätigung.</p></details>
+      <details><summary>Wie lange dauert der Umbau?</summary><p>Das hängt vom Haus ab. Mit dem Angebot bekommen Sie einen Ablaufplan, damit Sie wissen, wann was passiert.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="anfrage" class="navyband" aria-labelledby="fTitle" style="padding-block:56px 64px">
+  <div class="wrap">
+    <div class="card formgrid">
+      <div class="aside">
+        <h2 id="fTitle">Erzählen Sie uns kurz von <span class="u">Ihrem Haus</span>.</h2>
+        <p class="lead">Sechs kurze Fragen, dann meldet sich jemand aus unserem Büro telefonisch bei Ihnen und vereinbart einen Termin vor Ort. Die Beratung ist kostenlos und unverbindlich.</p>
+        <div class="contact">
+          <b>Lieber direkt anrufen?</b>
+          <a href="tel:+498943909732" style="font-weight:600">089/43909732</a>
+          <span>Mo–Do 9–12 und 13–16 Uhr, Fr 9–12 Uhr</span>
+        </div>
+      </div>
+      <div class="quiz" id="quiz">
+      <form id="lead" novalidate>
+        <div class="progress" aria-live="polite"><span id="pText">Frage 1 von 6</span><div class="bar"><i id="pBar"></i></div></div>
+
+        <fieldset class="qstep" data-step="1">
+          <legend>Um was für ein Gebäude geht es?</legend>
+          <div class="opts two">
+            <div class="opt"><input type="radio" name="gebaeude" id="b1" value="Einfamilienhaus"><label for="b1"><b>Einfamilienhaus</b></label></div>
+            <div class="opt"><input type="radio" name="gebaeude" id="b2" value="Doppel- oder Reihenhaus"><label for="b2"><b>Doppel- oder Reihenhaus</b></label></div>
+            <div class="opt"><input type="radio" name="gebaeude" id="b3" value="Mehrfamilienhaus"><label for="b3"><b>Mehrfamilienhaus</b></label></div>
+            <div class="opt"><input type="radio" name="gebaeude" id="b4" value="Neubau"><label for="b4"><b>Neubau</b><span>in Planung oder im Bau</span></label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="2" hidden>
+          <legend>Wie heizen Sie heute?</legend>
+          <div class="opts two">
+            <div class="opt"><input type="radio" name="heizung" id="h1" value="Ölheizung"><label for="h1"><b>Öl</b></label></div>
+            <div class="opt"><input type="radio" name="heizung" id="h2" value="Gasheizung"><label for="h2"><b>Gas</b></label></div>
+            <div class="opt"><input type="radio" name="heizung" id="h3" value="Andere Heizung"><label for="h3"><b>Etwas anderes</b><span>z. B. Pellets, Nachtspeicher</span></label></div>
+            <div class="opt"><input type="radio" name="heizung" id="h4" value="Noch keine Heizung (Neubau)"><label for="h4"><b>Noch keine Heizung</b><span>Neubau</span></label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="3" hidden>
+          <legend>Wie alt ist Ihre jetzige Heizung?</legend>
+          <p class="sub">Das ist für die Förderung wichtig.</p>
+          <div class="opts two">
+            <div class="opt"><input type="radio" name="alter" id="a1" value="unter 10 Jahre"><label for="a1"><b>Unter 10 Jahre</b></label></div>
+            <div class="opt"><input type="radio" name="alter" id="a2" value="10–20 Jahre"><label for="a2"><b>10 bis 20 Jahre</b></label></div>
+            <div class="opt"><input type="radio" name="alter" id="a3" value="über 20 Jahre"><label for="a3"><b>Über 20 Jahre</b></label></div>
+            <div class="opt"><input type="radio" name="alter" id="a4" value="weiß nicht / keine"><label for="a4"><b>Weiß ich nicht / keine</b></label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="4" hidden>
+          <legend>Wann soll die neue Heizung kommen?</legend>
+          <div class="opts">
+            <div class="opt"><input type="radio" name="zeitraum" id="z1" value="so bald wie möglich"><label for="z1"><b>So bald wie möglich</b><span>z. B. weil die alte Heizung Probleme macht</span></label></div>
+            <div class="opt"><input type="radio" name="zeitraum" id="z2" value="in 3–6 Monaten"><label for="z2"><b>In 3 bis 6 Monaten</b></label></div>
+            <div class="opt"><input type="radio" name="zeitraum" id="z3" value="in 6–12 Monaten"><label for="z3"><b>In 6 bis 12 Monaten</b></label></div>
+            <div class="opt"><input type="radio" name="zeitraum" id="z4" value="nur informieren"><label for="z4"><b>Ich informiere mich erst einmal</b></label></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="5" hidden>
+          <legend>Wo steht das Haus?</legend>
+          <p class="sub">Wir arbeiten im Umkreis von etwa 20 km um Hergolding.</p>
+          <div class="row2">
+            <div class="field"><label for="plz">Postleitzahl</label><input id="plz" name="plz" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="z. B. 85591"></div>
+            <div class="field"><label for="ort">Ort <em>(optional)</em></label><input id="ort" name="ort" autocomplete="address-level2" placeholder="z. B. Vaterstetten"></div>
+          </div>
+          <div class="opts two" role="radiogroup" aria-label="Nutzung">
+            <div class="opt"><input type="radio" name="eigentum" id="e1" value="Eigentümer, selbst bewohnt"><label for="e1"><b>Ich wohne selbst im Haus</b><span>als Eigentümer</span></label></div>
+            <div class="opt"><input type="radio" name="eigentum" id="e2" value="Vermieter / Verwalter"><label for="e2"><b>Ich vermiete oder verwalte</b></label></div>
+          </div>
+          <div class="err" id="err5"></div>
+        </fieldset>
+
+        <fieldset class="qstep" data-step="6" hidden>
+          <legend>Wie erreichen wir Sie?</legend>
+          <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name"></div>
+          <div class="row2">
+            <div class="field"><label for="tel">Telefon</label><input id="tel" name="telefon" type="tel" autocomplete="tel" inputmode="tel"></div>
+            <div class="field"><label for="mail">E-Mail</label><input id="mail" name="email" type="email" autocomplete="email"></div>
+          </div>
+          <div class="field"><label for="msg">Noch etwas, das wir wissen sollten? <em>(optional)</em></label><textarea id="msg" name="nachricht" placeholder="z. B. Wohnfläche, Heizkörper oder Fußbodenheizung, beste Uhrzeit für einen Rückruf"></textarea></div>
+          <div class="hp" aria-hidden="true"><label for="hp_kontrolle">Dieses Feld bitte leer lassen</label><input id="hp_kontrolle" name="hp_kontrolle" type="text" tabindex="-1" autocomplete="off" data-lpignore="true" data-1p-ignore></div>
+          <label class="consent"><input type="checkbox" id="dsgvo" name="dsgvo"><span>Ich bin einverstanden, dass die J. Ranner – Bad &amp; Dusche | Armaturenservice &amp; Sanitärfachgeschäft GmbH meine Angaben zur Bearbeitung der Anfrage speichert und mich dazu kontaktiert. Mehr in der <a href="https://www.jranner.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>
+          <div class="err" id="err6"></div>
+        </fieldset>
+
+        <div class="qnav">
+          <button type="button" class="back" id="back" hidden>Zurück</button>
+          <button type="button" class="btn" id="next" style="margin-left:auto">Weiter</button>
+        </div>
+      </form>
+
+      <div class="done" id="done" hidden>
+        <div class="tick" aria-hidden="true"></div>
+        <h2 tabindex="-1" id="doneTitle">Vielen Dank, Ihre Anfrage ist da.</h2>
+        <p>Wir haben Ihre Angaben erhalten. So geht es weiter:</p>
+        <ol>
+          <li>Wir rufen Sie in der Regel innerhalb eines Werktags an.</li>
+          <li>Wir vereinbaren einen Termin, um uns Ihre Heizung und Ihr Haus anzusehen.</li>
+          <li>Sie bekommen ein Konzept mit Heizlastberechnung und ein transparentes Angebot.</li>
+        </ol>
+        <p style="color:var(--grey);font-size:.95rem">Tipp für das Telefonat: Halten Sie, wenn möglich, Ihren Heizöl- oder Gasverbrauch der letzten Jahre bereit.</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>J. RANNER Energielösungen</b>Parsdorfer Straße 19<br>85599 Vaterstetten</div>
+    <div><b>Kontakt</b><a href="tel:+498943909732">089/43909732</a><br><a href="mailto:info@jranner.de">info@jranner.de</a></div>
+    <div><b>Bürozeiten</b>
+      <table><tr><td>Mo–Do</td><td>9–12 und 13–16 Uhr</td></tr><tr><td>Fr</td><td>9–12 Uhr</td></tr></table>
+      <p style="margin-top:12px"><a href="https://www.jranner.de/impressum" target="_blank" rel="noopener">Impressum</a> · <a href="https://www.jranner.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a> · <a href="#" id="cookieOpen">Cookie-Einstellungen</a></p>
+    </div>
+    <p class="legal">J. RANNER Energielösungen ist ein Geschäftsbereich der J. Ranner – Bad &amp; Dusche | Armaturenservice &amp; Sanitärfachgeschäft GmbH, Hergolding.</p>
+  </div>
+</footer>
+
+<div class="stickycta" id="stickycta">
+  <a class="btn" href="#anfrage" data-cta="sticky">Beratung anfragen</a>
+  <a class="btn ghost" href="tel:+498943909732" aria-label="Anrufen">Anrufen</a>
+</div>
+
+<div class="cookie" id="cookie" role="dialog" aria-labelledby="ckT" hidden>
+  <p id="ckT"><b>Cookies und Werbe-Messung.</b> Mit Ihrer Zustimmung nutzen wir das Meta-Pixel, um zu messen, ob unsere Anzeigen auf Instagram und Facebook ankommen. Ohne Zustimmung funktioniert die Seite genauso.</p>
+  <div class="cb">
+    <button type="button" class="btn ghost" id="ckNo">Nur notwendige</button>
+    <button type="button" class="btn" id="ckYes">Zustimmen</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var MODE = window.LP_MODE || 'live';
+  var PIXEL_ID = '383103774112767';
+  var ENDPOINT = '/.netlify/functions/anfrage';
+
+  /* ---------- Varianten (für verschiedene Anzeigen), Aufruf mit ?thema=... ---------- */
+  var V = {
+    waermepumpe:{eyebrow:'Wärmepumpen vom Fachbetrieb aus Hergolding',
+      title:'Ihre neue <span class="u">Wärmepumpe</span>. Geplant, eingebaut und betreut aus einer Hand.',
+      lede:'Wir schauen uns Ihr Haus vor Ort an, berechnen die Heizlast und bauen eine WOLF-Wärmepumpe ein, die zu Ihrem Haus passt. Bei den Unterlagen für die KfW-Förderung unterstützen wir Sie.'},
+    heizungstausch:{eyebrow:'Heizungstausch im Münchner Osten',
+      title:'Alte Öl- oder Gasheizung raus. <span class="u">Wärmepumpe</span> rein.',
+      lede:'Ihr Kessel ist in die Jahre gekommen? Wir prüfen vor Ort, ob eine Wärmepumpe zu Ihrem Haus passt, bauen die alte Anlage aus und die neue ein. Ein Ansprechpartner von der Besichtigung bis zur Inbetriebnahme.'},
+    foerderung:{eyebrow:'Wärmepumpe mit KfW-Förderung',
+      title:'Heizung tauschen und <span class="u">Förderung</span> nutzen.',
+      lede:'Für den Austausch einer alten Heizung gibt es einen Zuschuss der KfW. Wir planen Ihre Wärmepumpe und unterstützen Sie bei den Förderunterlagen, damit Sie den Antrag sicher stellen können.'}
+  };
+  function readVariant(){
+    var q = null;
+    try{ q = new URLSearchParams(location.search).get('thema'); }catch(e){}
+    var h = (location.hash||'').replace('#','');
+    return V[q] ? q : (V[h] ? h : 'waermepumpe');
+  }
+  var variant = readVariant();
+  function applyVariant(k){
+    var v = V[k]; if(!v) return; variant = k;
+    document.getElementById('hEyebrow').textContent = v.eyebrow;
+    document.getElementById('hTitle').innerHTML = v.title;
+    document.getElementById('hLede').textContent = v.lede;
+  }
+  applyVariant(variant);
+
+  var src = {};
+  try{
+    var sp = new URLSearchParams(location.search);
+    ['utm_source','utm_medium','utm_campaign','utm_content','fbclid'].forEach(function(k){ if(sp.get(k)) src[k]=sp.get(k); });
+  }catch(e){}
+
+  /* ---------- Cookie-Zustimmung + Meta-Pixel ---------- */
+  var KEY='jr_consent';
+  function getC(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function setC(v){ try{ localStorage.setItem(KEY,v); }catch(e){} }
+  var pixelOn = false;
+  function loadPixel(){
+    if(pixelOn || MODE!=='live') return; pixelOn = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',PIXEL_ID); fbq('track','PageView');
+  }
+  function track(ev,params,custom){ if(pixelOn && window.fbq){ custom ? fbq('trackCustom',ev,params||{}) : fbq('track',ev,params||{}); } }
+  var ck = document.getElementById('cookie');
+  if(getC()==='yes'){ loadPixel(); } else if(getC()!=='no'){ ck.hidden = false; }
+  document.getElementById('ckYes').addEventListener('click',function(){ setC('yes'); ck.hidden=true; loadPixel(); });
+  document.getElementById('ckNo').addEventListener('click',function(){ setC('no'); ck.hidden=true; });
+  document.getElementById('cookieOpen').addEventListener('click',function(e){ e.preventDefault(); ck.hidden=false; });
+
+  /* ---------- Fragebogen ---------- */
+  var form = document.getElementById('lead');
+  var steps = Array.prototype.slice.call(form.querySelectorAll('.qstep'));
+  var cur = 1, total = steps.length, started = false, AUTO = 4;
+  var nextBtn = document.getElementById('next'), backBtn = document.getElementById('back');
+  function show(n){
+    cur = n;
+    steps.forEach(function(s){ s.hidden = (+s.dataset.step !== n); });
+    document.getElementById('pText').textContent = 'Frage '+n+' von '+total;
+    document.getElementById('pBar').style.width = (n/total*100)+'%';
+    backBtn.hidden = n===1;
+    nextBtn.textContent = n===total ? 'Anfrage absenden' : 'Weiter';
+    nextBtn.hidden = (n<=AUTO && !form.querySelector('[data-step="'+n+'"] input:checked'));
+  }
+  function val(name){ var el = form.querySelector('[name="'+name+'"]:checked') || form.querySelector('[name="'+name+'"]'); return el ? (el.type==='radio'? (el.checked?el.value:'') : el.value.trim()) : ''; }
+  form.addEventListener('change',function(e){
+    if(!started){ started = true; track('AnfrageGestartet',{kampagne:'waermepumpe',variante:variant},true); }
+    if(e.target.type==='radio' && cur<=AUTO){
+      // Neubau: Frage nach dem Alter der Heizung überspringen
+      var skip = (cur===2 && e.target.value.indexOf('Noch keine')===0);
+      setTimeout(function(){ show(skip ? 4 : cur+1); },180);
+    }
+  });
+  backBtn.addEventListener('click',function(){
+    if(cur===4 && val('heizung').indexOf('Noch keine')===0){ show(2); return; }
+    if(cur>1) show(cur-1);
+  });
+  function check5(){
+    var plz = val('plz'), e = document.getElementById('err5');
+    if(!/^\d{5}$/.test(plz)){ e.textContent='Bitte eine fünfstellige Postleitzahl eingeben.'; document.getElementById('plz').focus(); return false; }
+    if(!val('eigentum')){ e.textContent='Bitte noch auswählen, ob Sie selbst im Haus wohnen oder es vermieten.'; return false; }
+    e.textContent=''; return true;
+  }
+  function check6(){
+    var e = document.getElementById('err6');
+    if(val('name').length<2){ e.textContent='Bitte Ihren Namen eintragen.'; document.getElementById('name').focus(); return false; }
+    if(val('telefon').replace(/\D/g,'').length<6){ e.textContent='Bitte eine Telefonnummer eintragen, damit wir Sie zurückrufen können.'; document.getElementById('tel').focus(); return false; }
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val('email'))){ e.textContent='Bitte eine gültige E-Mail-Adresse eintragen.'; document.getElementById('mail').focus(); return false; }
+    if(!document.getElementById('dsgvo').checked){ e.textContent='Bitte noch der Datenverarbeitung zustimmen.'; return false; }
+    e.textContent=''; return true;
+  }
+  nextBtn.addEventListener('click',function(){
+    if(cur===5){ if(check5()) show(6); return; }
+    if(cur===6){ if(check6()) submit(); return; }
+    if(form.querySelector('[data-step="'+cur+'"] input:checked')) show(cur+1);
+  });
+  function submit(){
+    var data = {
+      kampagne:'waermepumpe', variante:variant,
+      gebaeude:val('gebaeude'), heizung:val('heizung'), alter:val('alter'), zeitraum:val('zeitraum'),
+      plz:val('plz'), ort:val('ort'), eigentum:val('eigentum'),
+      name:val('name'), telefon:val('telefon'), email:val('email'), nachricht:val('nachricht'),
+      firma:val('hp_kontrolle'), quelle:src, seite:location.href.split('?')[0]
+    };
+    nextBtn.disabled = true; nextBtn.textContent = 'Wird gesendet …';
+    var done = function(){
+      form.hidden = true; var d = document.getElementById('done'); d.hidden = false;
+      document.getElementById('doneTitle').focus();
+      track('Lead',{content_name:'Wärmepumpe',variante:variant});
+    };
+    if(MODE!=='live'){ setTimeout(done,500); return; }
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); done(); })
+      .catch(function(){
+        nextBtn.disabled=false; nextBtn.textContent='Anfrage absenden';
+        document.getElementById('err6').innerHTML='Das Senden hat nicht geklappt. Bitte versuchen Sie es noch einmal oder rufen Sie uns an: <a href="tel:+498943909732">089/43909732</a>.';
+      });
+  }
+  show(1);
+
+  var sticky = document.getElementById('stickycta');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ sticky.classList.toggle('off', en[0].isIntersecting); },{threshold:.15}).observe(document.getElementById('anfrage'));
+  }
+
+  if(MODE==='preview'){
+    var pn = document.getElementById('previewNote'); pn.hidden = false;
+    pn.addEventListener('click',function(e){ var k = e.target.dataset && e.target.dataset.v; if(k){ applyVariant(k); window.scrollTo(0,0); } });
+  }
+})();
+</script>
+</body>
+</html>
