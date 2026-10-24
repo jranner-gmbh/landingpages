@@ -3,7 +3,7 @@
 | Ordner | Seite | Netlify-Projekt |
 |---|---|---|
 | `karriere/` | https://karriere.jranner.de | jranner-karriere |
-| `bad/` | https://bad.jranner.de | (folgt) |
+| `bad/` | https://bad.jranner.de | jranner-bad |
 | `waermepumpe/` | https://waermepumpe.jranner.de | (folgt) |
 
 ## Text ändern
